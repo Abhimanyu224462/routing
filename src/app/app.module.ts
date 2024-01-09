@@ -14,6 +14,7 @@ import { FlightListComponent } from './flight-list/flight-list.component';
 import { FlightBookingComponent } from './flight-booking/flight-booking.component';
 import { FlightPassComponent } from './flight-pass/flight-pass.component';
 import { HotelListComponent } from './hotel-list/hotel-list.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { HotelListComponent } from './hotel-list/hotel-list.component';
     FlightListComponent,
     FlightBookingComponent,
     FlightPassComponent,
-    HotelListComponent
+    HotelListComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
