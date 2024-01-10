@@ -8,7 +8,7 @@ import { TrainsComponent } from './trains/trains.component';
 import { BusesComponent } from './buses/buses.component';
 import { HotelsComponent } from './hotels/hotels.component';
 import { CabsComponent } from './cabs/cabs.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ErrorComponent } from './error/error.component';
 import { FlightListComponent } from './flight-list/flight-list.component';
 import { FlightBookingComponent } from './flight-booking/flight-booking.component';
@@ -34,7 +34,8 @@ import { LoginComponent } from './login/login.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

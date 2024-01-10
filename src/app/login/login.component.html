@@ -2,14 +2,19 @@
 
 <div class="container w-50 shadow border mt-5">
     <h3>Login</h3>
+    <form [formGroup] = "userRegForm">
 <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" formControlName="email">
   </div>
   <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="password">
+    <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="password" formControlName="password">
   </div>
   <button class="button btn btn-secondary mb-3">Login</button>
+</form>
 </div>
 <!-- </div> -->
+
+
+<h3>Dirty : {{userRegForm.dirty}}</h3>

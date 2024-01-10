@@ -11,8 +11,9 @@ import { FlightListComponent } from './flight-list/flight-list.component';
 import { FlightPassComponent } from './flight-pass/flight-pass.component';
 import { HotelListComponent } from './hotel-list/hotel-list.component';
 import { authGuard } from './guards/auth.guard';
-import { AuthenticationGuard } from './authentication.guard';
+import { AuthenticationGuard } from './guards/authentication.guard';
 import { LoginComponent } from './login/login.component';
+import { canLeave } from './guards/canLeave.guard';
 
 const routes: Routes = [
   {path:'buses',component:BusesComponent, canActivate:[AuthenticationGuard]},
@@ -25,7 +26,7 @@ const routes: Routes = [
   {path:'hotels',component:HotelsComponent, canActivate:[authGuard]},
   {path:'hotelList',component:HotelListComponent},
   {path:'trains',component:TrainsComponent},
-  {path:'login',component:LoginComponent},
+  {path:'login',component:LoginComponent, canDeactivate:[canLeave]},
   {path:'',redirectTo:'/trains', pathMatch:'full'},
   {path:'**', component:ErrorComponent}
 ];
